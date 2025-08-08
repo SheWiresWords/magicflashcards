@@ -1,4 +1,4 @@
-/*Flashcards Styles*/                                
+/*Background Styles*/                                
 *{
   margin: 0;
   padding: 0;
@@ -12,12 +12,12 @@ body{
   animation: liquidGradient 8s ease-in-out infinite;
   min-height: 100vh;
   color: #333333;
-  line-height: 1.6;
-  position: relative;
-  overflow-x: hidden;
+  line-height: 1.6;        
+  position: relative;  
+  overflow-x: hidden;   
 }
-
-@keyframes liquidGradient {
+  
+@keyframes liquidGradient{
   0%, 100% {
     background-position: 0% 50%;
   }
@@ -26,6 +26,7 @@ body{
   }
 }
 
+/*navigation bar content*/
 nav{
   display: flex;
   align-items: center;
@@ -68,7 +69,8 @@ nav ul li:hover{
   border-color: rgba(255, 255, 255, 0.4);
 }
 
-main{
+/*Home page content*/   
+main{               
   flex: 1;
   padding: 2rem;
   max-width: 1200px;
@@ -76,6 +78,177 @@ main{
   width: 100%;
 }
 
+.modern-header {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: #764ba2;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.carousel-container {
+  margin-bottom: 4rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.slide-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 800px;
+}
+
+.slide-content img {
+  width: 120px;
+  height: 120px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.slide-text h2 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slide-text p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: white;
+  border-color: white;
+}
+
+.main_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.main-button {
+  display: inline-block;
+  background: linear-gradient(45deg, rgba(239, 205, 254, 0.8), rgba(210, 158, 255, 0.8));
+  backdrop-filter: blur(20px);
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.main-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(136, 75, 210, 0.3);
+}
+
+
+/*Flashcard page content*/
 .flashcards{
   display: flex;
   justify-content: center;
