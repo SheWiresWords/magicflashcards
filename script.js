@@ -82,7 +82,6 @@ function prevCard(){
     updateCard();
 }
 
-
 //initiatlize
 document.addEventListener('DOMContentLoaded', function() {
     updateCard();
