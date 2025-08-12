@@ -1,12 +1,12 @@
 let currentCard = 0;
 let isFlipped = false;
-
+        
 const flashcards = [
-    {
+    {      
         term: "Variable",
         definition: "A named storage location that holds a value of a specific data type. Variables can be changed during program execution."
-    },
-    {
+    },  
+    {  
         term: "Data Type",
         definition: "Specifies the kind of data a variable can hold. Java has primitive types (int, double, boolean, char) and reference types (String, objects)."
     },
@@ -19,12 +19,12 @@ const flashcards = [
         definition: "A combination of variables, numbers, and operators (+, -, *, /, %) that evaluates to a numeric value."
     },
     {
-        term: "Compound Assignment",
-        definition: "Operators like +=, -=, *=, /= that perform an operation and assign the result back to the variable (e.g., x += 5 is equivalent to x = x + 5)."
+        term: "Compound Operator",
+        definition: "Operators like +=, -=, *=, /= that perform an operation and assign the result back to the variable (for example, x += 5 is the same as x = x + 5)."
     },
     {
         term: "Casting",
-        definition: "Converting one data type to another. Can be implicit (widening) or explicit (narrowing) using (datatype) syntax."
+        definition: "Converting one data type to another. Can be implicit (widening) or explicit (narrowing)."
     },
     {
         term: "String Concatenation",
@@ -121,6 +121,65 @@ const flashcards = [
     {
         term: "Method Overloading",
         definition: "Having multiple methods with the same name but different parameter lists (different number or types of parameters) in the same class."
+    },
+    {      
+    term: "Int",
+    definition: "A primitive data type that stores whole numbers (integers) without decimal points, typically ranging from -2,147,483,648 to 2,147,483,647."
+    },
+    
+    {      
+        term: "Double",
+        definition: "A primitive data type that stores floating-point numbers with double precision, providing approximately 15-17 decimal digits of accuracy."
+    },
+    
+    {      
+        term: "Float",
+        definition: "A primitive data type that stores floating-point numbers with single precision, providing approximately 6-7 decimal digits of accuracy."
+    },
+    
+    {      
+        term: "if Statement",
+        definition: "A conditional control structure that executes a block of code only when a specified boolean condition evaluates to true."
+    },
+    
+    {      
+        term: "else if Statement",
+        definition: "A conditional control structure that has an additional condition (else) to test when the preceding if or else if condition is false."
+    },
+    
+    {      
+        term: "For Loop",
+        definition: "A control structure that repeats a block of code a specific number of times."
+    },
+    
+    {      
+        term: "while Loop",
+        definition: "A control structure that repeatedly executes a block of code as long as a specified boolean condition remains true."
+    },
+    
+    {      
+        term: "For Each Loop",
+        definition: "A control structure that iterates through each element in a collection or array without requiring manual index management."
+    },
+    
+    {      
+        term: "2D Array",
+        definition: "A data structure that organizes elements in a two-dimensional grid format with rows and columns, accessed using two indices."
+    },
+    
+    {      
+        term: "Array",
+        definition: "A data structure that stores multiple elements of the same data type in a fixed-size sequential collection, accessed by index positions."
+    },
+    
+    {      
+        term: "ArrayList",
+        definition: "A dynamic data structure that can grow or shrink in size during runtime, storing elements in a resizable array with built-in methods for manipulation."
+    },
+    
+    {      
+        term: "Recursion",
+        definition: "A programming technique where a function calls itself to solve a problem by breaking it down into smaller, similar subproblems until reaching a base case."
     }
 ];
 
@@ -145,7 +204,6 @@ function updateCard(){
 function flipCard(){
     const flashcard = document.getElementById('flashcard');
     isFlipped = !isFlipped;
-    
     if(flashcard){
         flashcard.classList.toggle('flipped', isFlipped);
     }
@@ -157,7 +215,6 @@ function nextCard(){
     if(flashcard){
         flashcard.classList.remove('flipped');
     }
-    
     currentCard = (currentCard + 1) % flashcards.length;
     updateCard();
 }
@@ -165,10 +222,9 @@ function nextCard(){
 function prevCard(){
     isFlipped = false;
     const flashcard = document.getElementById('flashcard');
-    if (flashcard) {
+    if(flashcard){
         flashcard.classList.remove('flipped');
     }
-    
     currentCard = (currentCard - 1 + flashcards.length) % flashcards.length;
     updateCard();
 }
