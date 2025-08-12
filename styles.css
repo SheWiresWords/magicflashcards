@@ -33,7 +33,7 @@ nav{
   gap: 2rem;
 }
 
-nav ul li a{
+nav ul{
   text-decoration: none;
   color: #18003d;
   font-weight: 500;
@@ -47,7 +47,7 @@ nav ul li a{
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-nav ul li a::before{
+nav ul::before{
   content: '';
   position: absolute;
   top: 0;
@@ -57,12 +57,12 @@ nav ul li a::before{
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.5s ease;
 }
-
-nav ul li a:hover::before{
+    
+nav ul:hover::before{
   left: 100%;
 }
 
-nav ul li a:hover{
+nav ul:hover{
   background: rgba(239, 205, 254, 0.3);
   color: #18003d;
   transform: translateY(-2px);
@@ -490,12 +490,12 @@ main{
   color: white;
 }
 
-footer{
+.modern-footer{
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   margin-top: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
+}  
 
 .bubble{
   position: absolute;
